@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #f5f5f5;
+  margin: 0;
+  color: #1b1b1b;
+}
+
+main {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;  
+}
+
+h1 {
+  text-align: center; 
+  font-size: 2rem; 
+}
+
+.details {
+  display: flex; 
+  flex-direction: column; 
+}
+
+img {
+  height: 20rem; 
+  width: 25rem; 
+}
+
+summary {
+  box-shadow: 0 4px 5px -5px rgb(194, 192, 192);
+  list-style: none; 
+  cursor: pointer; 
+  position: relative; 
+  padding-right: 1.5rem; 
+}
+
+summary:hover, details[open] summary {
+  background-color: rgba(128, 128, 128, 0.25); 
+}
+
+summary::after {
+  content: "+"; 
+  position: absolute;
+  right: 0; 
+  bottom: 0;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+details[open] summary::after {
+  content: "-"; 
+  font-size: 1.5rem; 
+  bottom: -10%; 
+}
+
+.list {
+  list-style-type: none; 
+}
